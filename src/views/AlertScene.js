@@ -15,6 +15,10 @@ class AlertScene extends Component {
     });
   }
 
+  onChangeText(text) {
+    this.setState({ text });
+  }
+
   render() {
     return (
       <View style={Styles.container}>
@@ -28,7 +32,7 @@ class AlertScene extends Component {
                 width: 200,
                 height: 40,
               }}
-              onChangeText={text => this.setState(text)}
+              onChangeText={text => this.onChangeText(text)}
               value={this.state.text}
             />
             <Button onPress={() => this.alert()} title="Alert here" />
