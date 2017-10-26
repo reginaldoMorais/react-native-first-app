@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Button } from 'react-native';
+import { View, Button } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 import Styles from '../styles/MainStyles';
