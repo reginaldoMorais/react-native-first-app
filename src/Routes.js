@@ -6,6 +6,7 @@ import { Router, Stack, Scene } from 'react-native-router-flux';
  */
 import MainScene from './views/MainScene';
 import AlertScene from './views/AlertScene';
+import CustomNavBar from './views/CustomNavBar';
 
 class Routes extends Component {
   render() {
@@ -19,13 +20,7 @@ class Routes extends Component {
             navigationBarStyle={{ marginTop: 24, backgroundColor: '#2868C7' }}
             headerTitleStyle={{ color: '#fff' }}
           />
-          <Scene
-            key="alert"
-            component={AlertScene}
-            title="Alert View"
-            navigationBarStyle={{ marginTop: 24, backgroundColor: '#2868C7' }}
-            headerTitleStyle={{ color: '#fff' }}
-          />
+          <Scene key="alert" title="Alert View" navBar={CustomNavBar} backTitle="Back" component={AlertScene} />
         </Stack>
       </Router>
     );
